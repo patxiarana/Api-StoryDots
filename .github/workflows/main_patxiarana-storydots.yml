@@ -54,3 +54,20 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_13C13D1B12F74581B1819B5765EBCBCC }}
           package: .
+         
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+            node-version: '16.x'
+           
+      - name: initialize db
+        env:
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_HOST: ${{ secrets.DB_HOST}}
+        run: |
+         npm run init-db
+      
+
+
