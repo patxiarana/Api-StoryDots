@@ -1,7 +1,7 @@
 import {products} from '../models/products.js'
 
 
-/*export const getProducts = async (req ,res) =>{
+export const getProducts = async (req ,res) =>{
     try{
         const products1 = await products.findAll({
         });
@@ -11,7 +11,7 @@ import {products} from '../models/products.js'
     }
     
 }
-*/
+
 
 export const createProducts = async(req ,res) =>{
     try{
