@@ -69,7 +69,7 @@ jobs:
           DB_HOST: ${{ secrets.DB_HOST}}
         run: |
          cd Api &&
-         npm run init-db
+         npm run db-init
       
 
 

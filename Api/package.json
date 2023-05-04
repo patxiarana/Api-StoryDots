@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start" : "node Api/src/index.js",
-    "init-db": "node Api/database/database.js",
+    "db-init": "node Api/database/database.js",
     "dev": "nodemon src/index.js"
   },
   "repository": {
